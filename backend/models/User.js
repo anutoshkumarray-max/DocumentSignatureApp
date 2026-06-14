@@ -19,8 +19,6 @@ const userSchema = new mongoose.Schema({
     required: true
   }
 }, { timestamps: true });
-
-// Password save hone se pehle automatic hash karne ke liye hook
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
   try {
