@@ -13,8 +13,6 @@ router.post('/upload', protect, upload.single('pdf'), async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ message: 'Deployment error: No source file provided' });
     }
-
-    // Capture execution parameters from request object maps
     const newDocument = await Document.create({
       user: req.user._id,
       fileName: req.file.originalname,

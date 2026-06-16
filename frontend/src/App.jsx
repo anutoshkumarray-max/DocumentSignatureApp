@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Dashboard from './components/Dashboard';
+import DocumentPreview from './components/DocumentPreview';
 import { FileSignature, Shield, Zap, ArrowRight, UploadCloud, CheckCircle2, Sparkles, Code, Terminal, Layers } from 'lucide-react';
 
 export default function App() {
